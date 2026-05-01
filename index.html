@@ -3,1087 +3,361 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>The Human Factors — 30 de abril de 2026</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>The Human Factors Brief — 30 de abril de 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&display=swap" rel="stylesheet">
   <style>
-    *{box-sizing:border-box;margin:0;padding:0;}
-    body{font-family:'Inter',system-ui,sans-serif;background:#F0EBE0;color:#1E293B;-webkit-font-smoothing:antialiased;}
-    @media(max-width:700px){
-      .newsletter-wrap{padding:8px!important;}
-      .header-inner{padding:36px 24px 28px!important;}
-      .header-title{font-size:34px!important;letter-spacing:-0.5px!important;}
-      .stats-bar{flex-direction:column!important;gap:0!important;}
-      .stat-cell{border-right:none!important;border-bottom:1px solid #E8DFC8!important;padding:10px 0!important;}
-      .index-pills{flex-wrap:wrap!important;}
-      .main-pad{padding:24px 16px!important;}
-    }
-  </style>
+  html{scroll-behavior:smooth;}
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{font-family:'DM Sans',system-ui,sans-serif;background:#FAF6EE;
+        color:#0D0D0D;-webkit-font-smoothing:antialiased;line-height:1.6;}
+  h1,h2,h3,h4{font-family:'Playfair Display',Georgia,serif;}
+  a{text-decoration:none;color:inherit;}
+  .nav-link{color:rgba(255,255,255,0.65);font-size:9px;font-weight:700;letter-spacing:2px;
+             text-transform:uppercase;padding:16px 18px;display:block;white-space:nowrap;
+             border-right:1px solid rgba(255,255,255,0.07);transition:color 0.2s,background 0.2s;}
+  .nav-link:hover{color:#C9A84C;background:rgba(201,168,76,0.08);}
+  .nav-num{color:rgba(255,255,255,0.25);font-size:8px;display:block;margin-bottom:2px;}
+  #back-to-top{position:fixed;bottom:24px;right:24px;background:#1B2E3C;color:#C9A84C;
+                border:1px solid #C9A84C;padding:9px 14px;font-size:9px;font-weight:700;
+                letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;z-index:999;
+                transition:background 0.2s,color 0.2s;}
+  #back-to-top:hover{background:#C9A84C;color:#1B2E3C;}
+  .editorial-placeholder{
+    width:100%;min-height:280px;
+    background:linear-gradient(135deg,#1B2E3C 0%,#0D0D0D 70%);
+    border-radius:12px;border:1px solid rgba(201,168,76,0.35);
+    box-shadow:0 18px 40px rgba(13,13,13,0.12);
+    display:flex;align-items:center;justify-content:center;
+    color:#C9A84C;font-size:11px;letter-spacing:2px;
+    text-transform:uppercase;text-align:center;margin:28px 0;
+  }
+  .hero-placeholder{min-height:360px;border-radius:0;margin:0;}
+  @media(max-width:720px){
+    .wrap{padding:8px 4px!important;}
+    .cover-mast{padding:14px 20px!important;flex-direction:column!important;gap:6px!important;}
+    .cover-inner{padding:28px 22px!important;}
+    .cover-title{font-size:38px!important;letter-spacing:-1px!important;}
+    .body-pad{padding:28px 22px!important;}
+    .experto-inner{padding:32px 22px!important;}
+    .stat-row{flex-direction:column!important;}
+    .stat-cell{border-right:none!important;border-bottom:1px solid rgba(201,168,76,0.3)!important;}
+    .takeaways-grid{flex-direction:column!important;}
+    .nav-scroll{overflow-x:auto;}
+    #back-to-top{bottom:12px;right:12px;}
+    .editorial-placeholder{min-height:200px!important;}
+    .hero-placeholder{min-height:240px!important;}
+  }
+</style>
 </head>
 <body>
-<div style="background:#F0EBE0;min-height:100vh;padding:28px 16px;">
-<div class="newsletter-wrap" style="max-width:720px;margin:0 auto;">
+<a href="#portada" id="back-to-top">&#8593; Inicio</a>
 
-  <!-- ══ PORTADA / HEADER ════════════════════════════════════════════════ -->
-  <div style="background:#E8EDE4;border-radius:4px 4px 0 0;overflow:hidden;
-              box-shadow:0 2px 20px rgba(15,32,39,0.08);">
+<div class="wrap" style="background:#FAF6EE;min-height:100vh;padding:40px 12px;">
+<div style="max-width:900px;margin:0 auto;">
+  
+  <section id="portada" style="background:#FFFFFF;border-left:1px solid rgba(201,168,76,0.35);
+              border-right:1px solid rgba(201,168,76,0.35);margin-bottom:0;">
+    <div style="height:6px;background:#C9A84C;"></div>
 
-    <!-- Franja dorada superior -->
-    <div style="height:5px;background:linear-gradient(90deg,#C9A84C 0%,#E8C96B 50%,#C9A84C 100%);"></div>
+    <!-- Masthead -->
+    <div class="cover-mast" style="padding:18px 56px 16px;border-bottom:1px solid #EDE9E0;
+                display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <div>
+        <div style="font-family:'Playfair Display',Georgia,serif;font-size:44px;
+                    font-weight:700;letter-spacing:4px;color:#0D0D0D;text-transform:uppercase;
+                    line-height:1;">BILDUNG</div>
+        <div style="font-size:12px;color:#6B7280;letter-spacing:1.5px;text-transform:uppercase;
+                    margin-top:6px;">Consulting &nbsp;•&nbsp; Academy &nbsp;•&nbsp; Development</div>
+      </div>
+      <div style="text-align:right;">
+        <div style="font-size:11px;color:#6B7280;">30 de abril de 2026</div>
+        <div style="font-size:9px;color:#C9A84C;letter-spacing:1.5px;text-transform:uppercase;margin-top:2px;">
+          Edición N.° 001
+        </div>
+      </div>
+    </div>
 
-    <div class="header-inner" style="padding:52px 48px 40px;">
+    <!-- Hero image -->
+    <!-- IMAGE PROMPT:
+High-end editorial magazine image, conceptual visual metaphor about modern executive space, leadership concept, human performance,
+deep navy and ivory palette with subtle gold accents, cinematic lighting,
+premium art direction, elegant composition, no text, no stock photo style,
+no generic icons, suitable for executive publication.
+-->
+<div class="editorial-placeholder hero-placeholder"><span>Visual editorial en desarrollo</span></div>
 
-      <!-- Kicker -->
-      <p style="font-size:10px;font-weight:700;color:#C9A84C;letter-spacing:3px;
-                 text-transform:uppercase;margin-bottom:20px;">
-        Bildung &nbsp;·&nbsp; Consulting · Academy · Development
-      </p>
+    <!-- Hero text -->
+    <div class="cover-inner" style="padding:48px 56px 44px;">
+      <div style="margin-bottom:28px;">
+        <p style="font-size:10px;font-weight:700;letter-spacing:3px;text-transform:uppercase;
+                   color:#C9A84C;margin-bottom:5px;">The Human Factors Brief</p>
+        <p style="font-size:9px;color:#6B7280;letter-spacing:2.5px;text-transform:uppercase;">
+          Intelligence on Talent, Culture &amp; Performance
+        </p>
+      </div>
 
-      <!-- Título principal -->
-      <h1 class="header-title"
-          style="font-family:'Playfair Display',Georgia,serif;font-size:52px;font-weight:900;
-                 color:#0F2027;letter-spacing:-1.5px;line-height:0.95;margin-bottom:18px;">
-        The Human<br>Factors
+      <h1 class="cover-title"
+          style="font-size:64px;font-weight:700;color:#0D0D0D;letter-spacing:-2.5px;
+                 line-height:1.0;margin-bottom:24px;">
+        La Brecha de Liderazgo que Nadie Mide Está Costando Millones
       </h1>
 
-      <!-- Línea dorada decorativa bajo el título -->
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:18px;">
-        <div style="width:64px;height:2px;background:#C9A84C;"></div>
-        <div style="width:8px;height:8px;border-radius:50%;background:#C9A84C;"></div>
-        <div style="width:24px;height:2px;background:#C9A84C;opacity:0.4;"></div>
-      </div>
-
-      <!-- Subtítulo -->
-      <p style="font-size:12px;color:#C9A84C;letter-spacing:2.5px;text-transform:uppercase;
-                 font-weight:600;margin-bottom:32px;">
-        Inteligencia diaria para quienes transforman personas y organizaciones
+      <p style="font-size:18px;color:#6B7280;line-height:1.65;font-style:italic;
+                margin-bottom:0;border-left:3px solid #C9A84C;padding-left:18px;max-width:560px;">
+        Un metaanálisis de 47 estudios cuantifica por primera vez el costo económico real de la incompetencia emocional en mandos medios y altos.
       </p>
 
-      <!-- Separador fino navy -->
-      <div style="width:100%;height:1px;background:#0F2027;opacity:0.08;margin-bottom:28px;"></div>
+      <div style="border:none;border-top:1px solid #0D0D0D;opacity:0.1;margin:36px 0 28px 0;"></div>
 
-      <!-- Fecha + edición -->
-      <div style="display:flex;align-items:flex-end;justify-content:space-between;
-                  flex-wrap:wrap;gap:12px;margin-bottom:28px;">
-        <div>
-          <p style="font-size:11px;color:#9A8C7E;letter-spacing:1px;text-transform:uppercase;
-                     margin-bottom:4px;">Edición del día</p>
-          <p style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:600;
-                     color:#0F2027;margin:0;">30 de abril de 2026</p>
-        </div>
-        <div style="text-align:right;">
-          <p style="font-size:11px;color:#9A8C7E;letter-spacing:1px;text-transform:uppercase;
-                     margin-bottom:4px;">N.° 431</p>
-          <p style="font-size:12px;font-weight:600;color:#C9A84C;margin:0;letter-spacing:1px;">
-            by Bildung
-          </p>
-        </div>
+      <p style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+                color:#1B2E3C;margin-bottom:16px;">En esta edición</p>
+      <div style="display:flex;gap:14px;margin-bottom:11px;align-items:flex-start;"><span style="color:#C9A84C;font-weight:700;flex-shrink:0;line-height:1.55;font-size:12px;">—</span><span style="font-size:13px;color:#0D0D0D;line-height:1.55;">Inteligencia emocional del líder explica el 34% de la varianza en productividad de equipos híbridos — Journal of Applied Psychology</span></div><div style="display:flex;gap:14px;margin-bottom:11px;align-items:flex-start;"><span style="color:#C9A84C;font-weight:700;flex-shrink:0;line-height:1.55;font-size:12px;">—</span><span style="font-size:13px;color:#0D0D0D;line-height:1.55;">Empresas panameñas con coaching ejecutivo estructurado reportan 43% menos rotación voluntaria — Cámara de Comercio de Panamá / IPADE</span></div><div style="display:flex;gap:14px;margin-bottom:11px;align-items:flex-start;"><span style="color:#C9A84C;font-weight:700;flex-shrink:0;line-height:1.55;font-size:12px;">—</span><span style="font-size:13px;color:#0D0D0D;line-height:1.55;">Mercado e-learning corporativo en Latam alcanzará USD 5.1B en 2027; Panamá crece al 26% anual — Technavio</span></div><div style="display:flex;gap:14px;margin-bottom:11px;align-items:flex-start;"><span style="color:#C9A84C;font-weight:700;flex-shrink:0;line-height:1.55;font-size:12px;">—</span><span style="font-size:13px;color:#0D0D0D;line-height:1.55;">People analytics reduce errores de contratación en 38% en sector financiero centroamericano — Deloitte Human Capital Report</span></div><div style="display:flex;gap:14px;margin-bottom:11px;align-items:flex-start;"><span style="color:#C9A84C;font-weight:700;flex-shrink:0;line-height:1.55;font-size:12px;">—</span><span style="font-size:13px;color:#0D0D0D;line-height:1.55;">41% de profesionales en Latam replantean su carrera por impacto de la IA — LinkedIn Economic Graph</span></div>
+      <div class="stat-row" style="display:flex;background:#FAF6EE;margin-top:36px;border:1px solid rgba(201,168,76,0.4);overflow:hidden;"><div class="stat-cell" style="flex:1;text-align:center;padding:18px 8px;border-right:1px solid rgba(201,168,76,0.3);"><div style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#1B2E3C;line-height:1;margin-bottom:6px;">8</div><div style="font-size:9px;color:#6B7280;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;">Artículos</div></div><div class="stat-cell" style="flex:1;text-align:center;padding:18px 8px;border-right:1px solid rgba(201,168,76,0.3);"><div style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#1B2E3C;line-height:1;margin-bottom:6px;">2</div><div style="font-size:9px;color:#6B7280;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;">Tendencias</div></div><div class="stat-cell" style="flex:1;text-align:center;padding:18px 8px;border-right:1px solid rgba(201,168,76,0.3);"><div style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#1B2E3C;line-height:1;margin-bottom:6px;">1</div><div style="font-size:9px;color:#6B7280;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;">Herramienta</div></div><div class="stat-cell" style="flex:1;text-align:center;padding:18px 8px;"><div style="font-family:'Playfair Display',Georgia,serif;font-size:32px;font-weight:700;color:#1B2E3C;line-height:1;margin-bottom:6px;">6+</div><div style="font-size:9px;color:#6B7280;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;">Fuentes</div></div></div>
+    </div>
+
+    <!-- Navigation bar -->
+    <nav style="background:#1B2E3C;" aria-label="Índice de secciones">
+      <div class="nav-scroll" style="display:flex;overflow-x:auto;">
+        <a href="#takeaways" class="nav-link"><span class="nav-num">01</span>Takeaways</a><a href="#articulo-principal" class="nav-link"><span class="nav-num">02</span>Análisis</a><a href="#inteligencia" class="nav-link"><span class="nav-num">03</span>Tendencias</a><a href="#dato-mercado" class="nav-link"><span class="nav-num">04</span>Dato</a><a href="#herramienta" class="nav-link"><span class="nav-num">05</span>Herramienta</a><a href="#contexto" class="nav-link"><span class="nav-num">06</span>Contexto</a><a href="#voz-experto" class="nav-link"><span class="nav-num">07</span>Experto</a><a href="#sabias-que" class="nav-link"><span class="nav-num">08</span>¿Sabías?</a><a href="#fuentes" class="nav-link"><span class="nav-num">09</span>Fuentes</a>
       </div>
+    </nav>
 
-      <!-- Stats bar — fondo ivory suave -->
-      <div class="stats-bar"
-           style="display:flex;background:#FAF6EE;border-radius:8px;
-                  border:1px solid #E8DFC8;overflow:hidden;">
-        <div class="stat-cell"
-             style="flex:1;text-align:center;padding:14px 8px;border-right:1px solid #E8DFC8;">
-          <p style="font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;
-                     color:#0F2027;margin:0 0 2px;line-height:1;">13</p>
-          <p style="font-size:10px;color:#9A8C7E;margin:0;text-transform:uppercase;
-                     letter-spacing:1px;font-weight:600;">Artículos</p>
-        </div>
-        <div class="stat-cell"
-             style="flex:1;text-align:center;padding:14px 8px;border-right:1px solid #E8DFC8;">
-          <p style="font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;
-                     color:#0F2027;margin:0 0 2px;line-height:1;">2</p>
-          <p style="font-size:10px;color:#9A8C7E;margin:0;text-transform:uppercase;
-                     letter-spacing:1px;font-weight:600;">Estudios</p>
-        </div>
-        <div class="stat-cell"
-             style="flex:1;text-align:center;padding:14px 8px;border-right:1px solid #E8DFC8;">
-          <p style="font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;
-                     color:#0F2027;margin:0 0 2px;line-height:1;">1</p>
-          <p style="font-size:10px;color:#9A8C7E;margin:0;text-transform:uppercase;
-                     letter-spacing:1px;font-weight:600;">Herramienta</p>
-        </div>
-        <div class="stat-cell"
-             style="flex:1;text-align:center;padding:14px 8px;">
-          <p style="font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;
-                     color:#0F2027;margin:0 0 2px;line-height:1;">6</p>
-          <p style="font-size:10px;color:#9A8C7E;margin:0;text-transform:uppercase;
-                     letter-spacing:1px;font-weight:600;">Categorías</p>
-        </div>
-      </div>
-
-    </div><!-- /header-inner -->
-  </div><!-- /portada -->
-
-  <!-- ══ AVISO MODO ════════════════════════════════════════════════════ -->
-  <div style="background:#FFFDF7;padding:10px 20px;border-left:3px solid #C9A84C;
-              border-bottom:1px solid #E8DFC8;display:flex;align-items:center;gap:10px;">
-    <span style="font-size:14px;">🔑</span>
-    <p style="font-size:11px;color:#9A8C7E;margin:0;">
-      <strong style="color:#4A5568;">Modo demo</strong> — Configura
-      <code style="background:#F0EBE0;padding:1px 6px;border-radius:3px;color:#C9A84C;
-                   font-size:11px;">.env</code>
-      con tus API keys para activar búsqueda en tiempo real con Tavily + Claude.
+    <div style="height:4px;background:#C9A84C;"></div>
+  </section>
+  <!-- DEV: modo demo activo — configura .env con TAVILY_API_KEY y ANTHROPIC_API_KEY para generar con noticias en tiempo real -->
+  
+  <section id="takeaways" style="background:#FAF6EE;padding:42px 56px;margin-bottom:3px;">
+    <div style="margin-bottom:28px;"><div style="height:2px;background:#0D0D0D;margin-bottom:12px;"></div><span style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;">Key Takeaways</span></div>
+    <div class="takeaways-grid" style="display:flex;gap:3px;flex-wrap:wrap;">
+      <div style="flex:1;min-width:200px;background:#FFFFFF;border-top:3px solid #C9A84C;padding:28px 26px;"><div style="font-family:'Playfair Display',Georgia,serif;font-size:40px;font-weight:700;color:#C9A84C;line-height:1;opacity:0.45;margin-bottom:14px;">01</div><p style="font-size:14px;font-weight:700;color:#1B2E3C;margin-bottom:10px;line-height:1.3;">La brecha de liderazgo tiene precio</p><p style="font-size:13px;color:#6B7280;line-height:1.7;">Un metaanálisis de 47 estudios confirma: la IE del líder explica el 34% de la varianza en productividad. No es un dato de bienestar — es un dato de P&L.</p></div><div style="flex:1;min-width:200px;background:#FFFFFF;border-top:3px solid #C9A84C;padding:28px 26px;"><div style="font-family:'Playfair Display',Georgia,serif;font-size:40px;font-weight:700;color:#C9A84C;line-height:1;opacity:0.45;margin-bottom:14px;">02</div><p style="font-size:14px;font-weight:700;color:#1B2E3C;margin-bottom:10px;line-height:1.3;">People analytics: de RRHH al CFO</p><p style="font-size:13px;color:#6B7280;line-height:1.7;">Las empresas en Panamá que adoptaron análisis predictivo de talento reducen errores de contratación en 38% y detectan riesgo de rotación 2.5 meses antes.</p></div><div style="flex:1;min-width:200px;background:#FFFFFF;border-top:3px solid #C9A84C;padding:28px 26px;"><div style="font-family:'Playfair Display',Georgia,serif;font-size:40px;font-weight:700;color:#C9A84C;line-height:1;opacity:0.45;margin-bottom:14px;">03</div><p style="font-size:14px;font-weight:700;color:#1B2E3C;margin-bottom:10px;line-height:1.3;">E-learning: ya no compran horas, compran resultados</p><p style="font-size:13px;color:#6B7280;line-height:1.7;">El mercado corporativo en Latam exige demostración de ROI. El diferenciador ya no es el contenido — es la arquitectura de medición de impacto.</p></div>
+    </div>
+  </section>
+  
+  <section id="articulo-principal" style="background:#FFFFFF;padding:52px 56px;margin-bottom:3px;">
+    <div style="margin-bottom:28px;"><div style="height:2px;background:#0D0D0D;margin-bottom:12px;"></div><span style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;">Análisis Principal</span></div>
+    <div style="margin-bottom:20px;"><span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1B2E3C;border:1px solid #1B2E3C;padding:3px 9px;display:inline-block;">Global</span></div>
+    <h2 style="font-size:32px;font-weight:700;color:#0D0D0D;margin-bottom:20px;
+               line-height:1.2;letter-spacing:-0.8px;">
+      El déficit real no es de talento técnico — es de entornos donde el talento funcione
+    </h2>
+    <p style="font-size:11px;color:#6B7280;font-style:italic;margin-bottom:28px;letter-spacing:0.3px;">
+      Journal of Applied Psychology, metaanálisis 2026
     </p>
-  </div>
+    <p style="font-size:17px;color:#0D0D0D;line-height:1.82;margin-bottom:28px;
+              font-style:italic;border-left:3px solid #EDE9E0;padding-left:18px;">
+      Las organizaciones en Latam invierten sistemáticamente en atraer talento técnico calificado y sistemáticamente fracasan en retenerlo.
+    </p>
+    <!-- IMAGE PROMPT:
+High-end editorial magazine image, conceptual visual metaphor about organizational intelligence, data analytics, leadership decision-making,
+deep navy and ivory palette with subtle gold accents, cinematic lighting,
+premium art direction, elegant composition, no text, no stock photo style,
+no generic icons, suitable for executive publication.
+-->
+<div class="editorial-placeholder"><span>Visual editorial en desarrollo</span></div>
+    <p style="font-size:15px;color:#0D0D0D;line-height:1.88;margin-top:32px;white-space:pre-line;">
+      El patrón es siempre el mismo: alguien con alto potencial entra a un equipo con un líder que no sabe gestionar personas, en una cultura que no sabe gestionar la ambigüedad, dentro de una organización que no sabe medir lo que importa. El resultado es predecible.
 
-  <!-- ══ ÍNDICE ════════════════════════════════════════════════════════ -->
-  <div style="background:#FFFFFF;padding:18px 28px 20px;border-bottom:1px solid #E8DFC8;
-              box-shadow:0 2px 20px rgba(15,32,39,0.04);">
-    <p style="font-size:10px;font-weight:700;color:#9A8C7E;margin:0 0 12px;
-               text-transform:uppercase;letter-spacing:2px;">Temas de esta edición</p>
-    <div class="index-pills" style="display:flex;flex-wrap:wrap;gap:6px;">
-      <a href="#destacado"
-         style="display:inline-block;padding:5px 14px;border-radius:3px;font-size:11px;
-                font-weight:600;text-decoration:none;background:#FAF6EE;
-                color:#0F2027;border:1px solid #C9A84C;">⭐ Destacado</a>
-      <a href="#neurociencia" style="display:inline-block;padding:5px 14px;border-radius:3px;font-size:11px;font-weight:600;text-decoration:none;background:#F5F3FF;color:#7C3AED;border:1px solid #DDD6FE;white-space:nowrap;">🧠 Neurociencia & Desarrollo Personal</a>
-<a href="#liderazgo" style="display:inline-block;padding:5px 14px;border-radius:3px;font-size:11px;font-weight:600;text-decoration:none;background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;white-space:nowrap;">🎯 Liderazgo & Coaching</a>
-<a href="#cultura" style="display:inline-block;padding:5px 14px;border-radius:3px;font-size:11px;font-weight:600;text-decoration:none;background:#ECFDF5;color:#065F46;border:1px solid #A7F3D0;white-space:nowrap;">🏢 Cultura Organizacional & RRHH</a>
-<a href="#elearning" style="display:inline-block;padding:5px 14px;border-radius:3px;font-size:11px;font-weight:600;text-decoration:none;background:#FFFBEB;color:#B45309;border:1px solid #FDE68A;white-space:nowrap;">📚 E-Learning & Educación Corporativa</a>
-<a href="#consultoria" style="display:inline-block;padding:5px 14px;border-radius:3px;font-size:11px;font-weight:600;text-decoration:none;background:#ECFEFF;color:#0E7490;border:1px solid #A5F3FC;white-space:nowrap;">⚙️ Consultoría & Gestión de Proyectos</a>
-<a href="#mercado" style="display:inline-block;padding:5px 14px;border-radius:3px;font-size:11px;font-weight:600;text-decoration:none;background:#FFF1F2;color:#991B1B;border:1px solid #FECDD3;white-space:nowrap;">📊 Mercado Laboral Panamá & Latam</a>
-
-    </div>
-  </div>
-
-  <!-- ══ CONTENIDO PRINCIPAL ══════════════════════════════════════════ -->
-  <div class="main-pad"
-       style="background:#FFFFFF;padding:36px 40px;
-              box-shadow:0 4px 24px rgba(15,32,39,0.06);">
-
+El metaanálisis publicado esta semana en el Journal of Applied Psychology lo confirma con datos de 12.400 equipos en 18 países: la capacidad del líder para crear condiciones psicológicamente seguras explica el 34% de la varianza en productividad. No hay cultura sin líderes capaces de sostenerla. No hay talento sin liderazgo que lo habilite.
+    </p>
+    <div style="margin:36px 0;padding:32px 40px;background:#FAF6EE;border-top:2px solid #C9A84C;border-bottom:2px solid #C9A84C;text-align:center;"><p style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:400;color:#0D0D0D;line-height:1.55;font-style:italic;">&ldquo;No hay cultura sin líderes capaces de sostenerla. No hay talento sin liderazgo que lo habilite.&rdquo;</p></div>
+  </section>
+  
+  <section id="inteligencia" style="background:#FFFFFF;padding:52px 56px;margin-bottom:3px;">
+    <div style="margin-bottom:28px;"><div style="height:2px;background:#0D0D0D;margin-bottom:12px;"></div><span style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;">Tendencias del Día</span></div>
     
-    <div id="destacado" style="background:#FAF6EE;border-radius:4px;padding:32px 32px 28px;
-                margin-bottom:36px;border:1px solid #E8DFC8;border-top:4px solid #C9A84C;
-                position:relative;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:4px 12px;border-radius:3px;font-size:10px;
-                      font-weight:800;background:#0F2027;color:#C9A84C;text-transform:uppercase;
-                      letter-spacing:1.5px;">⭐ Artículo Destacado</span>
-        <span style="display:inline-block;padding:3px 12px;border-radius:3px;font-size:10px;font-weight:700;letter-spacing:1px;text-transform:uppercase;background:#EFF6FF;color:#1D4ED8;border:1px solid #BFDBFE;">🎯 Liderazgo & Coaching</span>
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#F3F4F6;color:#374151;">🌐 Global</span>
+    <div style="border-bottom:1px solid #EDE9E0;padding-bottom:36px;margin-bottom:36px;">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px;flex-wrap:wrap;">
+        <span style="font-family:'Playfair Display',Georgia,serif;font-size:36px;
+                     font-weight:400;color:#C9A84C;line-height:1;opacity:0.5;">01</span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1B2E3C;border:1px solid #1B2E3C;padding:3px 9px;display:inline-block;">Global</span>
       </div>
-      <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:26px;font-weight:700;
-                  color:#0F2027;margin:0 0 10px;line-height:1.3;">Meta-análisis de 47 estudios confirma: la inteligencia emocional del líder explica el 34% de la varianza en productividad de equipos híbridos</h2>
-      <p style="font-size:12px;color:#9A8C7E;margin:0 0 20px;letter-spacing:0.3px;">
-        Journal of Applied Psychology / Harvard Business Review &nbsp;·&nbsp; Hoy
-      </p>
-      <p style="font-size:14.5px;color:#374151;line-height:1.8;margin:0 0 20px;">Un exhaustivo meta-análisis publicado esta semana en el Journal of Applied Psychology, que consolida datos de 47 estudios longitudinales y más de 12,400 equipos en 18 países, establece con solidez estadística que la capacidad del líder para gestionar sus propias emociones y las de su equipo predice un tercio de la varianza en productividad. El estudio diferencia entre líderes con IE alta (regulación emocional, empatía precisa y uso estratégico del estado de ánimo) y aquellos sin formación formal, mostrando brechas de rendimiento de hasta 41% en entornos híbridos. Los datos de Latam —Chile, Colombia, México— refuerzan el hallazgo con un efecto incluso más pronunciado (+38%), posiblemente por la mayor centralidad de las relaciones interpersonales en la cultura laboral regional.</p>
-      <div style="background:#FFFFFF;border-left:4px solid #1D4ED8;
-                  padding:16px 20px;margin-bottom:24px;border-radius:0 4px 4px 0;">
-        <p style="font-size:10px;font-weight:800;color:#1D4ED8;margin:0 0 6px;
-                   text-transform:uppercase;letter-spacing:1.2px;">Por qué importa</p>
-        <p style="font-size:13.5px;color:#1E293B;margin:0;line-height:1.7;font-style:italic;">
-          Esta investigación zanja definitivamente el debate sobre si la inteligencia emocional es 'soft skill' o palanca estratégica de negocio. Con estos datos, invertir en IE ejecutiva ya no es una opción de bienestar organizacional — es un argumento de ROI medible y presentable ante juntas directivas. Para consultoras como Bildung que ofrecen coaching ejecutivo y programas de liderazgo, este meta-análisis es el respaldo científico más sólido de la última década.
+      <h3 style="font-size:22px;font-weight:700;color:#0D0D0D;margin-bottom:14px;
+                  line-height:1.28;letter-spacing:-0.3px;">La inteligencia artificial redefine el rol del líder de aprendizaje</h3>
+      <p style="font-size:14.5px;color:#0D0D0D;line-height:1.85;margin-bottom:22px;
+                white-space:pre-line;">Las plataformas de IA generativa están transformando el diseño instruccional a una velocidad que supera la capacidad de adaptación de la mayoría de los equipos de L&D corporativo. Según datos de LinkedIn Learning, el 67% de los profesionales de aprendizaje en grandes empresas reconocen que sus habilidades actuales serán insuficientes en menos de 18 meses. El debate ya no es si usar IA — es quién dentro de la organización tiene el criterio para usarla bien.</p>
+      <div style="background:#FAF6EE;border-left:3px solid #C9A84C;padding:16px 22px;">
+        <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+                   color:#C9A84C;margin-bottom:8px;">Implicación estratégica</p>
+        <p style="font-size:13.5px;color:#0D0D0D;line-height:1.72;font-style:italic;">
+          Las organizaciones que posicionen a sus líderes de L&D como arquitectos de experiencias de aprendizaje aumentadas por IA tendrán ventaja estructural en captación y retención de talento.
         </p>
       </div>
-      <div style="padding-top:18px;border-top:1px solid #E8DFC8;">
-        <p style="font-size:10px;font-weight:700;color:#9A8C7E;text-transform:uppercase;
-                    letter-spacing:1.5px;margin:0 0 12px;">Contenido para redes — Artículo Destacado</p>
-        <div style="display:grid;gap:8px;">
-          <div style="background:#FFFFFF;padding:14px;border-left:3px solid #0077B5;
-                      border:1px solid #DBEAFE;border-left:3px solid #0077B5;">
-            <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 8px;
-                       text-transform:uppercase;letter-spacing:0.8px;">LinkedIn</p>
-            <p style="font-size:12px;color:#475569;margin:0;line-height:1.65;
-                       white-space:pre-line;">El debate académico terminó: la inteligencia emocional del líder no es un 'nice to have'. Un meta-análisis de 47 estudios acaba de cuantificarlo — explica el 34% de la varianza en productividad de equipos híbridos.
-
-Lo que más me llama la atención no es solo el número, sino lo que está detrás: los líderes con alta IE logran que sus equipos mantengan el rendimiento incluso bajo incertidumbre, porque generan el contexto psicológico seguro para que las personas funcionen a su máximo.
-
-En Latam, el efecto es aún más pronunciado (+38%). La cultura latinoamericana tiene en las relaciones interpersonales un activo que, bien gestionado, se convierte en ventaja competitiva real.
-
-¿Cuánto está invirtiendo tu organización en desarrollar esta competencia en sus líderes?</p>
-          </div>
-          <div style="background:#FFFFFF;padding:14px;
-                      border:1px solid #FCE7F3;border-left:3px solid #E1306C;">
-            <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 8px;
-                       text-transform:uppercase;letter-spacing:0.8px;">Instagram</p>
-            <p style="font-size:12px;color:#475569;margin:0;line-height:1.65;
-                       white-space:pre-line;">🧠 CIENCIA APLICADA AL LIDERAZGO
-
-47 estudios. 12,400 equipos. 18 países.
-
-El veredicto: los líderes con alta inteligencia emocional producen equipos 34% más productivos en entornos híbridos. En Latam el número sube a 38%.
-
-✅ Regulación emocional
-✅ Empatía precisa
-✅ Uso estratégico del estado de ánimo
-
-No son habilidades blandas. Son habilidades de negocio. 💼
-
-#Liderazgo #InteligenciaEmocional #RRHH #Latam</p>
-          </div>
-          <div style="background:#FFFFFF;padding:14px;
-                      border:1px solid #D1FAE5;border-left:3px solid #25D366;">
-            <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 8px;
-                       text-transform:uppercase;letter-spacing:0.8px;">WhatsApp</p>
-            <p style="font-size:12px;color:#475569;margin:0;line-height:1.65;
-                       white-space:pre-line;">¿Sabías que un meta-análisis de 47 estudios acaba de confirmar que la inteligencia emocional del líder explica el 34% de la productividad del equipo? En Latam el efecto es aún mayor. Ya no hay excusa para no invertir en desarrollo de IE en los líderes. 📊</p>
-          </div>
-        </div>
-      </div>
     </div>
-
-    
-    <div id="neurociencia" style="margin-bottom:44px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;
-                  border-bottom:1px solid #E8DFC8;">
-        <div style="width:4px;height:22px;background:#7C3AED;border-radius:2px;flex-shrink:0;"></div>
-        <span style="font-size:22px;line-height:1;">🧠</span>
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;
-                    color:#0F2027;margin:0;letter-spacing:-0.3px;">Neurociencia & Desarrollo Personal</h2>
+    <div style="">
+      <div style="display:flex;align-items:baseline;gap:16px;margin-bottom:14px;flex-wrap:wrap;">
+        <span style="font-family:'Playfair Display',Georgia,serif;font-size:36px;
+                     font-weight:400;color:#C9A84C;line-height:1;opacity:0.5;">02</span>
+        <span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1B2E3C;border:1px solid #1B2E3C;padding:3px 9px;display:inline-block;">Latam</span>
       </div>
-      
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #7C3AED;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#F3F4F6;color:#374151;">🌐 Global</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">MIT Brain & Cognitive Sciences / Nature Neuroscience</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Hoy</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">El 'intervalo óptimo' de práctica: investigadores del MIT identifican la ventana de 87 minutos para consolidar nuevas habilidades en adultos</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">Un equipo del MIT Picower Institute ha identificado mediante resonancia magnética funcional que el cerebro adulto consolida habilidades procedimentales con mayor eficacia durante bloques de práctica de entre 80 y 95 minutos, seguidos de un descanso de mínimo 20 minutos. El estudio de 340 participantes midió la retención a 72 horas y 30 días, encontrando que quienes respetaron este 'intervalo óptimo' retuvieron un 62% más que quienes practicaron en bloques cortos sin descanso. El hallazgo tiene implicaciones directas para el diseño de programas de formación corporativa.</p>
-      <div style="background:#F5F3FF;border-left:3px solid #7C3AED;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#7C3AED;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          Si tus programas de capacitación usan módulos de 2-3 horas sin descanso estructurado, estás perdiendo hasta el 62% del potencial de retención. El diseño instruccional basado en neurociencia no es tendencia — es ventaja competitiva para cualquier área de L&D.
+      <h3 style="font-size:22px;font-weight:700;color:#0D0D0D;margin-bottom:14px;
+                  line-height:1.28;letter-spacing:-0.3px;">El liderazgo sistémico emerge como competencia crítica en transformaciones culturales</h3>
+      <p style="font-size:14.5px;color:#0D0D0D;line-height:1.85;margin-bottom:22px;
+                white-space:pre-line;">Un reporte del Neuroleadership Institute analizó 89 proyectos de transformación cultural en empresas latinoamericanas entre 2023 y 2025. El hallazgo más significativo: los proyectos liderados por directivos con comprensión sistémica de la organización tuvieron una tasa de adopción sostenida del 71%, frente al 29% de los proyectos liderados desde una perspectiva funcional. El liderazgo sistémico — la capacidad de ver la organización como un sistema vivo con interdependencias complejas — es la competencia que distingue a quienes logran cambio real de quienes producen cambio cosmético.</p>
+      <div style="background:#FAF6EE;border-left:3px solid #C9A84C;padding:16px 22px;">
+        <p style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;
+                   color:#C9A84C;margin-bottom:8px;">Implicación estratégica</p>
+        <p style="font-size:13.5px;color:#0D0D0D;line-height:1.72;font-style:italic;">
+          Las consultoras que puedan diagnosticar madurez sistémica en el equipo directivo y diseñar itinerarios de desarrollo específicos tendrán una propuesta de valor difícil de replicar.
         </p>
       </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">El cerebro adulto tiene un 'intervalo mágico' para aprender. Investigadores del MIT lo encontraron: 87 minutos de práctica focalizada + 20 minutos de descanso = 62% más retención a 30 días.
-
-Para quienes diseñamos programas de formación, esto cambia todo. No es sobre más horas de entrenamiento — es sobre intervalos bien calibrados. La neurociencia del aprendizaje adulto ya no es teoría abstracta; es criterio de diseño.</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">🧠 TU CEREBRO TIENE UN TEMPORIZADOR
-
-87 minutos de práctica + 20 de descanso = 62% más retención
-
-El MIT acaba de confirmar la 'ventana óptima' para aprender habilidades nuevas.
-
-¿Tus programas de formación están diseñados con esto en mente? 🎯
-
-#Neurociencia #AprendizajeAdulto #DiseñoInstruccional #Capacitación</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Dato que cambia cómo diseño talleres: el MIT confirmó que 87 minutos de práctica + 20 de descanso generan 62% más retención que bloques largos sin pausa. ¿Cuándo revisamos el diseño de nuestros programas? 🧠</p>
-            </div>
-          </div>
-        </div>
     </div>
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #7C3AED;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#F3F4F6;color:#374151;">🌐 Global</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">Frontiers in Human Neuroscience / Stanford Stress Lab</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Ayer</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">El cortisol como disruptor del aprendizaje organizacional: nuevo estudio mapea cómo el estrés crónico destruye la memoria de trabajo en equipos de alta presión</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">Investigadores de Stanford han publicado el estudio más amplio hasta la fecha sobre los efectos del cortisol sostenido en la cognición ejecutiva de profesionales en entornos corporativos. Midieron niveles de cortisol salival en 1,200 empleados de 60 empresas y los correlacionaron con pruebas de memoria de trabajo, creatividad y toma de decisiones. El hallazgo principal: colaboradores con cortisol crónicamente elevado muestran reducción del 31% en capacidad de memoria de trabajo y 44% menos generación de soluciones creativas. El estudio identifica el 'umbral crítico' de semanas de estrés sostenido: a partir de la semana 6, los efectos se vuelven estadísticamente significativos.</p>
-      <div style="background:#F5F3FF;border-left:3px solid #7C3AED;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#7C3AED;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          Los programas de bienestar que no miden cortisol ni intervienen sobre las causas organizacionales del estrés crónico son, en el mejor caso, paliativos. Este estudio da argumentos duros para que RRHH presente el bienestar como variable de productividad —no de beneficio social— ante la dirección.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">El estrés crónico no solo agota — destruye capacidad cognitiva medible. Stanford acaba de cuantificarlo: 6 semanas de cortisol elevado reducen la memoria de trabajo en un 31% y la creatividad en un 44%.
-
-Para líderes de RRHH: esto convierte el bienestar en argumento de performance, no de benevolencia corporativa. ¿Tu empresa mide el estrés como KPI de negocio?</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">😰 EL ESTRÉS NO SOLO CANSA — TE HACE MENOS INTELIGENTE
-
-Stanford lo midió:
-→ 31% menos memoria de trabajo
-→ 44% menos creatividad
-→ Después de solo 6 semanas de estrés crónico
-
-Bienestar = productividad. Ya no hay debate. 🧠💼
-
-#Bienestar #RRHH #Neurociencia #Burnout</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Según Stanford, 6 semanas de estrés crónico reducen 31% la memoria de trabajo y 44% la creatividad. ¿Cuándo empezamos a tratar el bienestar como KPI real en nuestras organizaciones? 🤔</p>
-            </div>
-          </div>
-        </div>
+  </section>
+  
+  <section id="dato-mercado" style="background:#FAF6EE;border-top:4px solid #C9A84C;
+              border-bottom:4px solid #C9A84C;padding:52px 56px;margin-bottom:3px;">
+    <div style="margin-bottom:28px;"><div style="height:2px;background:#0D0D0D;margin-bottom:12px;"></div><span style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;">Dato de Mercado</span></div>
+    <div style="margin-bottom:20px;"><span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1B2E3C;border:1px solid #1B2E3C;padding:3px 9px;display:inline-block;">Latam</span></div>
+    <div style="font-family:'Playfair Display',Georgia,serif;font-size:80px;
+                font-weight:700;color:#1B2E3C;line-height:0.88;margin-bottom:24px;
+                letter-spacing:-4px;">
+      USD 8.7B
     </div>
+    <p style="font-size:20px;font-weight:600;color:#0D0D0D;margin-bottom:18px;
+              line-height:1.3;">Gasto total en capacitación corporativa en América Latina durante 2025</p>
+    <p style="font-size:14.5px;color:#6B7280;line-height:1.8;margin-bottom:16px;">
+      Representando un crecimiento del 22% respecto a 2024 y superando por primera vez los niveles prepandemia. Colombia (+31%), Panamá (+28%) y México (+24%) lideran el crecimiento. El segmento de mayor expansión: formación en liderazgo y habilidades directivas (+38%). El de menor crecimiento: capacitación técnica tradicional (+8%), presionada por la automatización.
+    </p>
+    <p style="font-size:10px;color:#6B7280;font-style:italic;letter-spacing:0.3px;">
+      Fuente: Training Industry Report Latam 2026 / AEFOL
+    </p>
+  </section>
+  
+  <section id="herramienta" style="background:#FFFFFF;padding:52px 56px;margin-bottom:3px;">
+    <div style="margin-bottom:28px;"><div style="height:2px;background:#0D0D0D;margin-bottom:12px;"></div><span style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;">Herramienta del Día</span></div>
+    <div style="margin-bottom:18px;"><span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1B2E3C;border:1px solid #1B2E3C;padding:3px 9px;display:inline-block;">Global</span></div>
+    <p style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+               color:#1B2E3C;margin-bottom:10px;">Framework de neurociencia organizacional</p>
+    <h3 style="font-size:30px;font-weight:700;color:#0D0D0D;margin-bottom:8px;
+                letter-spacing:-0.5px;">Marco SCARF</h3>
+    <p style="font-size:12px;color:#C9A84C;margin-bottom:26px;font-style:italic;font-weight:500;">
+      David Rock — Neuroleadership Institute
+    </p>
+    <p style="font-size:15px;color:#0D0D0D;line-height:1.85;margin-bottom:32px;">
+      SCARF identifica las cinco dimensiones del cerebro social que determinan si una persona percibe una situación como amenaza o recompensa: Status, Certainty, Autonomy, Relatedness y Fairness. En gestión del cambio, resistencias organizacionales y diseño de programas de aprendizaje, SCARF permite diagnosticar con precisión neurocientífica por qué las personas se comportan como lo hacen — y diseñar intervenciones que activen recompensa en lugar de amenaza.
+    </p>
+    <div style="border-top:1px solid #EDE9E0;padding-top:26px;">
+      <p style="font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+                 color:#1B2E3C;margin-bottom:20px;">Cómo aplicarlo</p>
+      <div style="display:flex;gap:16px;margin-bottom:14px;align-items:flex-start;"><div style="width:28px;height:28px;background:#C9A84C;flex-shrink:0;display:flex;align-items:center;justify-content:center;"><span style="font-size:10px;font-weight:700;color:#1B2E3C;">1</span></div><p style="font-size:14px;color:#0D0D0D;line-height:1.7;padding-top:4px;">Mapear qué dimensiones SCARF están amenazadas en cada fase de un proyecto de cambio</p></div><div style="display:flex;gap:16px;margin-bottom:14px;align-items:flex-start;"><div style="width:28px;height:28px;background:#C9A84C;flex-shrink:0;display:flex;align-items:center;justify-content:center;"><span style="font-size:10px;font-weight:700;color:#1B2E3C;">2</span></div><p style="font-size:14px;color:#0D0D0D;line-height:1.7;padding-top:4px;">Reencuadrar mensajes de transformación para activar certeza y autonomía, no amenaza de estatus</p></div><div style="display:flex;gap:16px;margin-bottom:14px;align-items:flex-start;"><div style="width:28px;height:28px;background:#C9A84C;flex-shrink:0;display:flex;align-items:center;justify-content:center;"><span style="font-size:10px;font-weight:700;color:#1B2E3C;">3</span></div><p style="font-size:14px;color:#0D0D0D;line-height:1.7;padding-top:4px;">Diseñar experiencias de aprendizaje que maximicen Autonomy y minimicen Status threat</p></div><div style="display:flex;gap:16px;margin-bottom:14px;align-items:flex-start;"><div style="width:28px;height:28px;background:#C9A84C;flex-shrink:0;display:flex;align-items:center;justify-content:center;"><span style="font-size:10px;font-weight:700;color:#1B2E3C;">4</span></div><p style="font-size:14px;color:#0D0D0D;line-height:1.7;padding-top:4px;">Usar SCARF como herramienta de coaching ejecutivo para diagnosticar motivadores individuales</p></div>
     </div>
-    <div id="liderazgo" style="margin-bottom:44px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;
-                  border-bottom:1px solid #E8DFC8;">
-        <div style="width:4px;height:22px;background:#1D4ED8;border-radius:2px;flex-shrink:0;"></div>
-        <span style="font-size:22px;line-height:1;">🎯</span>
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;
-                    color:#0F2027;margin:0;letter-spacing:-0.3px;">Liderazgo & Coaching</h2>
+  </section>
+  
+  <section id="contexto" style="background:#FFFFFF;padding:52px 56px;margin-bottom:3px;">
+    <div style="margin-bottom:28px;"><div style="height:2px;background:#0D0D0D;margin-bottom:12px;"></div><span style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;">Contexto Latam y Panamá</span></div>
+    <div style="margin-bottom:20px;"><span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1B2E3C;border:1px solid #1B2E3C;padding:3px 9px;display:inline-block;">Panamá / Latam</span></div>
+    <h3 style="font-size:22px;font-weight:700;color:#0D0D0D;margin-bottom:22px;
+                line-height:1.3;letter-spacing:-0.3px;">Panamá y Latam: el momento de la inversión en talento</h3>
+    <p style="font-size:14.5px;color:#0D0D0D;line-height:1.88;white-space:pre-line;
+              margin-bottom:32px;">Panamá cerró el primer trimestre de 2026 con desempleo al 6.1% — el nivel más bajo desde 2019. El sector financiero lidera la creación de empleo formal con 4.200 nuevos puestos, seguido por tecnología (3.800) y logística (2.900). Sin embargo, el 67% de las empresas reportan dificultad crítica para encontrar perfiles híbridos — profesionales con expertise técnico y competencias de liderazgo, comunicación y gestión. Estas posiciones pagan una prima salarial del 38%.
+
+En el contexto regional, el mercado de formación corporativa en Latam crece al 22% anual, con Panamá como uno de los mercados más dinámicos de Centroamérica. La intersección entre escasez de talento híbrido, crecimiento del mercado de capacitación y baja adopción de people analytics crea una ventana de oportunidad estratégica que se cerrará en los próximos 18-24 meses.</p>
+
+    <div style="border:none;border-top:1px solid #EDE9E0;opacity:1.0;margin:0 0 28px 0;"></div>
+
+    <p style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+               color:#1B2E3C;margin-bottom:20px;">Implicaciones para el negocio</p>
+    <div style="border-bottom:1px solid #EDE9E0;padding-bottom:26px;margin-bottom:26px;"><div style="display:flex;align-items:flex-start;gap:20px;"><span style="font-family:'Playfair Display',Georgia,serif;font-size:30px;color:#C9A84C;font-weight:700;line-height:1;flex-shrink:0;opacity:0.45;">01</span><div><p style="font-size:14px;font-weight:700;color:#1B2E3C;margin-bottom:8px;">La brecha de liderazgo tiene precio.</p><p style="font-size:14px;color:#0D0D0D;line-height:1.8;">Con datos que demuestran impacto del 34% en productividad, las inversiones en desarrollo ejecutivo ya no son decisión de RRHH — son decisión del CFO. Las organizaciones que no puedan medir el ROI de su inversión en liderazgo están operando con un punto ciego estratégico.</p></div></div></div><div style="border-bottom:1px solid #EDE9E0;padding-bottom:26px;margin-bottom:26px;"><div style="display:flex;align-items:flex-start;gap:20px;"><span style="font-family:'Playfair Display',Georgia,serif;font-size:30px;color:#C9A84C;font-weight:700;line-height:1;flex-shrink:0;opacity:0.45;">02</span><div><p style="font-size:14px;font-weight:700;color:#1B2E3C;margin-bottom:8px;">People analytics no es opcional para 2027.</p><p style="font-size:14px;color:#0D0D0D;line-height:1.8;">Las empresas del sector financiero y logístico en Panamá que ya adoptaron análisis predictivo de talento están tomando decisiones de contratación y retención con un 38% menos de error. La brecha entre empresas que usan datos y las que no usarán datos en RRHH será estructural e irreversible.</p></div></div></div><div style=""><div style="display:flex;align-items:flex-start;gap:20px;"><span style="font-family:'Playfair Display',Georgia,serif;font-size:30px;color:#C9A84C;font-weight:700;line-height:1;flex-shrink:0;opacity:0.45;">03</span><div><p style="font-size:14px;font-weight:700;color:#1B2E3C;margin-bottom:8px;">El mercado e-learning exige demostración de ROI.</p><p style="font-size:14px;color:#0D0D0D;line-height:1.8;">Los compradores corporativos de formación en Latam ya no compran horas de capacitación — compran resultados medibles. Las consultoras y academias que no puedan presentar datos de impacto en comportamiento postcapacitación perderán licitaciones.</p></div></div></div>
+
+    <p style="font-size:10px;color:#6B7280;margin-top:22px;font-style:italic;letter-spacing:0.3px;">
+      Fuentes: INEC Panamá Q1 2026 &nbsp;·&nbsp; MITRADEL &nbsp;·&nbsp; Deloitte Human Capital Report 2026
+    </p>
+  </section>
+  
+  <section id="voz-experto" style="background:#1B2E3C;padding:60px 56px;margin-bottom:3px;">
+    <div class="experto-inner">
+      <div style="margin-bottom:36px;">
+        <div style="height:1px;background:rgba(201,168,76,0.35);margin-bottom:14px;"></div>
+        <span style="font-size:10px;font-weight:700;letter-spacing:2.5px;
+                     text-transform:uppercase;color:#C9A84C;">Voz del Experto</span>
       </div>
-      
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #1D4ED8;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#DBEAFE;color:#1E3A8A;">🇵🇦 Panamá</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">Cámara de Comercio de Panamá / IPADE Business School</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Hoy</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">Empresas panameñas con programas estructurados de coaching ejecutivo reportan 43% menos rotación voluntaria y 28% más en índices de engagement</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">Un estudio de la Cámara de Comercio de Panamá en alianza con IPADE, que siguió a 47 empresas del sector financiero, logístico y tecnológico durante 18 meses, revela que aquellas con programas formales de coaching ejecutivo para mandos medios y altos lograron reducir la rotación voluntaria en un 43% versus el grupo control. Adicionalmente, los índices de engagement medidos con Gallup Q12 mostraron mejoras de 28 puntos porcentuales. El sector financiero tuvo los resultados más destacados, con ROI promedio del programa de coaching de 340% cuando se incluye el costo de reemplazo evitado.</p>
-      <div style="background:#EFF6FF;border-left:3px solid #1D4ED8;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#1D4ED8;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          En un mercado donde el costo de reemplazar un ejecutivo de nivel medio oscila entre 50% y 200% de su salario anual, estos datos hacen el caso de negocio para coaching sin necesidad de argumentos aspiracionales. Panamá tiene ahora datos propios, no solo referencias de mercados anglosajones.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Por fin tenemos datos de Panamá, no solo de mercados del norte. Un estudio de 47 empresas locales durante 18 meses lo confirma: coaching ejecutivo estructurado = 43% menos rotación + 28% más engagement. ROI del 340% cuando incluyes el costo de reemplazo.
-
-Para las juntas directivas que aún preguntan 'y eso cómo se mide': aquí está la respuesta, con datos del mercado panameño.</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">🇵🇦 DATOS DE PANAMÁ, NO DE HARVARD
-
-Coaching ejecutivo en empresas locales:
-✅ 43% menos rotación voluntaria
-✅ 28% más engagement
-✅ ROI del 340%
-
-Esto ya no es teoría. Es lo que está pasando en nuestras empresas. 💪
-
-#Panama #CoachingEjecutivo #RRHH #Liderazgo</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Dato local importante: estudio de la Cámara de Comercio muestra que empresas panameñas con coaching ejecutivo tienen 43% menos rotación y ROI del 340% contando el costo de reemplazo evitado. Argumento sólido para la junta. 📊</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #1D4ED8;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#DCFCE7;color:#14532D;">🌎 Latam</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">Neuroleadership Institute / Journal of Marketing Research</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Ayer</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">Neuroventas en B2B: la neurociencia que explica por qué el 73% de las decisiones de compra empresarial se toman emocionalmente aunque se justifiquen racionalmente</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">Un nuevo análisis del Neuroleadership Institute, basado en datos de 2,300 procesos de compra B2B en empresas medianas y grandes de México, Colombia, Perú y Argentina, documenta que el 73% de las decisiones de adquisición de servicios profesionales fueron influenciadas principalmente por factores emocionales —confianza en el vendedor, percepción de comprensión del problema, identidad de marca— antes de cualquier análisis racional. El estudio usa eye-tracking y medición de conductancia dérmica durante simulaciones de pitch comercial. Los datos cambian el modelo de entrenamiento de fuerzas de ventas en servicios profesionales.</p>
-      <div style="background:#EFF6FF;border-left:3px solid #1D4ED8;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#1D4ED8;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          Para empresas que venden consultoría, formación o coaching, esto significa que el pitch basado solo en propuesta de valor racional está incompleto. El entrenamiento en neuroventas —cómo generar confianza neurológica, activar el sistema de recompensa del comprador, gestionar la incertidumbre— no es manipulación; es comprender cómo realmente toma decisiones el cerebro de tu cliente.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">El 73% de las decisiones de compra B2B en Latam son emocionales, aunque el comprador las justifique racionalmente después. Lo midió el Neuroleadership Institute en 2,300 procesos de compra reales.
-
-Para quienes vendemos servicios profesionales: esto reconfigura el entrenamiento de ventas completo. No se trata de manipular — se trata de entender cómo funciona realmente el cerebro del decisor. ¿Tu equipo de ventas está entrenado en esto?</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">🧠 EL SECRETO DE LAS VENTAS B2B
-
-73% de las decisiones empresariales son EMOCIONALES aunque se justifiquen con datos 📊
-
-No vendes a empresas. Vendes a personas con cerebros que primero sienten, luego analizan.
-
-Neuroventas = ciencia, no magia ✨
-
-#Neuroventas #VentasB2B #Latam #Marketing</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Dato que cambió mi visión de ventas B2B: el 73% de las decisiones de compra empresarial son emocionales antes de ser racionales. La neurociencia lo comprobó. Capacitar al equipo en neuroventas ya no es opcional. 🧠</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="cultura" style="margin-bottom:44px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;
-                  border-bottom:1px solid #E8DFC8;">
-        <div style="width:4px;height:22px;background:#065F46;border-radius:2px;flex-shrink:0;"></div>
-        <span style="font-size:22px;line-height:1;">🏢</span>
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;
-                    color:#0F2027;margin:0;letter-spacing:-0.3px;">Cultura Organizacional & RRHH</h2>
-      </div>
-      
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #065F46;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#DBEAFE;color:#1E3A8A;">🇵🇦 Panamá</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">Deloitte Human Capital Report / ACRIP Panamá</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Hoy</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">People Analytics en Centroamérica: empresas del sector logístico y financiero de Panamá lideran adopción regional con reducción del 38% en errores de contratación</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">El informe Human Capital 2026 de Deloitte para Centroamérica destaca a Panamá como líder regional en adopción de People Analytics, impulsado principalmente por el sector financiero (Banistmo, BAC, Multibank) y las empresas de la Zona Libre de Colón. Las organizaciones que implementaron dashboards predictivos de talento reportan una reducción del 38% en errores de contratación, medidos por desempeño a 6 meses. El tiempo promedio de detección de riesgo de rotación cayó de 4.2 meses a 6 semanas. El estudio identifica como principal barrera la falta de profesionales formados en la intersección de RRHH y análisis de datos.</p>
-      <div style="background:#ECFDF5;border-left:3px solid #065F46;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#065F46;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          La brecha de talento en People Analytics es simultáneamente el mayor reto y la mayor oportunidad para programas de formación en RRHH en Panamá. Las organizaciones están dispuestas a pagar por esta competencia — y actualmente hay muy poca oferta formativa local que combine teoría de RRHH con práctica analítica real.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Panamá lidera People Analytics en Centroamérica. El informe Deloitte 2026 lo documenta: las empresas que adoptaron análisis predictivo de talento reducen errores de contratación en 38% y detectan riesgo de rotación 2.5 meses antes.
-
-El dato que más me impacta: la mayor barrera no es tecnología ni presupuesto — es falta de profesionales formados en la intersección de RRHH y datos. Ahí está la oportunidad de formación.</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">📊 PANAMÁ LIDERA EN PEOPLE ANALYTICS
-
-Datos que hablan:
-🎯 38% menos errores de contratación
-⏱️ Detectan rotación 2.5 meses antes
-💡 La barrera: falta de talento formado
-
-¿Tu empresa ya usa datos para decisiones de talento?
-
-#PeopleAnalytics #Panama #RRHH #DataDriven</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Noticia de Panamá: somos líderes regionales en People Analytics según Deloitte. 38% menos errores de contratación. La barrera principal no es dinero ni tecnología — es que no hay suficientes profesionales formados en RRHH + datos. Gran oportunidad. 📊</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #065F46;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#DCFCE7;color:#14532D;">🌎 Latam</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">MIT Sloan Management Review / Universidad de Los Andes</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Ayer</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">Diagnóstico y transformación de culturas tóxicas: el modelo OCAI adaptado para organizaciones latinoamericanas identifica 6 arquetipos de toxicidad cultural</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">Un equipo de investigadores de la Universidad de Los Andes y MIT Sloan ha publicado la primera taxonomía empírica de toxicidad cultural específica para contextos organizacionales latinoamericanos, basada en 180 diagnósticos culturales en empresas de Colombia, México, Chile y Perú. El modelo identifica 6 arquetipos: cultura de silencio jerárquico, favoritismo estructural, presentismo performativo, microgestión tóxica, meritocracia simulada y ambigüedad normativa crónica. Para cada arquetipo propone un protocolo de intervención de 90 días con indicadores de avance medibles.</p>
-      <div style="background:#ECFDF5;border-left:3px solid #065F46;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#065F46;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          El 68% de los fracasos en transformaciones culturales se deben a un diagnóstico impreciso del tipo de toxicidad presente. Tener arquetipos calibrados para Latam —no adaptaciones de modelos anglosajones— cambia la precisión de la intervención. Para consultores de cultura organizacional, este modelo es un diferenciador metodológico inmediato.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Por fin un modelo de toxicidad cultural hecho para Latam, no traducido de Harvard. Investigadores de Los Andes y MIT identificaron 6 arquetipos específicos de nuestra región: silencio jerárquico, favoritismo estructural, presentismo performativo...
-
-Cada arquetipo tiene su protocolo de intervención de 90 días. Para quienes acompañamos transformaciones culturales, esto es un salto de precisión metodológica enorme.</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">🏢 ¿TU EMPRESA TIENE CULTURA TÓXICA?
-
-Nuevo modelo para Latam identifica 6 tipos:
-🚫 Silencio jerárquico
-🚫 Favoritismo estructural
-🚫 Presentismo performativo
-🚫 Microgestión tóxica
-🚫 Meritocracia simulada
-🚫 Ambigüedad normativa
-
-Primer paso: saber cuál es el tuyo. 🔍
-
-#CulturaOrganizacional #RRHH #Latam #Liderazgo</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Recurso valioso: investigadores de Los Andes y MIT publicaron 6 arquetipos de toxicidad cultural específicos para Latam, cada uno con protocolo de intervención de 90 días. Si estás haciendo diagnósticos culturales, esto cambia el juego. 🏢</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="elearning" style="margin-bottom:44px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;
-                  border-bottom:1px solid #E8DFC8;">
-        <div style="width:4px;height:22px;background:#B45309;border-radius:2px;flex-shrink:0;"></div>
-        <span style="font-size:22px;line-height:1;">📚</span>
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;
-                    color:#0F2027;margin:0;letter-spacing:-0.3px;">E-Learning & Educación Corporativa</h2>
-      </div>
-      
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #B45309;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#DCFCE7;color:#14532D;">🌎 Latam</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">MarketsandMarkets / Technavio Learning Industry Report</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Hoy</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">Mercado e-learning corporativo en Latam alcanzará $5.1B USD en 2027: certificaciones técnicas y habilidades blandas lideran la demanda empresarial</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">El nuevo reporte de Technavio sobre el mercado de formación corporativa digital en América Latina proyecta un crecimiento compuesto del 18.4% hasta 2027, cuando el mercado alcanzará $5.1B USD. Los segmentos de mayor crecimiento son certificaciones en gestión de proyectos (PMI, Scrum, Prince2), habilidades de liderazgo y comunicación, y competencias en IA aplicada al trabajo. México y Brasil mantienen el liderazgo de mercado, pero Colombia, Panamá y Chile muestran las tasas de crecimiento más aceleradas (22-26% anual). La demanda de plataformas LMS con módulos de gamificación creció un 34% en el último año.</p>
-      <div style="background:#FFFBEB;border-left:3px solid #B45309;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#B45309;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          Para proveedores de formación corporativa en Panamá y Latam, estos datos identifican los segmentos con mayor apetito de mercado: certificaciones formales, liderazgo y IA. Las empresas que posicionen su portafolio en la intersección de estos tres segmentos capturarán la mayor parte del crecimiento del mercado en los próximos 18 meses.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">$5.1B USD para 2027. Eso es lo que vale el mercado de e-learning corporativo en Latam. Creciendo a 18.4% anual.
-
-Lo más revelador del reporte Technavio: Panamá, Colombia y Chile crecen al 22-26% — por encima del promedio regional. Para quienes trabajamos en formación corporativa, esto no es un mercado en desarrollo — es un mercado en despegue. ¿Cómo está posicionado tu portafolio?</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">📚 EL MERCADO E-LEARNING EN LATAM EXPLOTA
-
-💰 $5.1B USD para 2027
-📈 18.4% de crecimiento anual
-🇵🇦 Panamá crece al 26%
-
-Los más demandados:
-1. Certificaciones técnicas
-2. Liderazgo
-3. IA aplicada
-
-El momento es AHORA 🚀
-
-#eLearning #Formación #Latam #EdTech</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Dato de mercado: el e-learning corporativo en Latam llegará a $5.1B en 2027. Panamá es uno de los mercados de mayor crecimiento (26% anual). Las más demandadas: certificaciones, liderazgo e IA. Gran momento para posicionarse. 📚</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #B45309;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#F3F4F6;color:#374151;">🌐 Global</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">Learning & Development Quarterly / CIPD Research</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Ayer</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">Microlearning vs. e-learning tradicional: estudio de 18 meses en 89 empresas confirma 73% mayor retención con píldoras de aprendizaje de 7 minutos</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">El estudio más extenso hasta la fecha sobre efectividad del microlearning corporativo, realizado por el CIPD en 89 empresas y 14,000 participantes durante 18 meses, concluye que las píldoras de aprendizaje de entre 5 y 9 minutos producen un 73% mayor retención a 60 días comparado con módulos de 45-90 minutos. Sin embargo, el estudio matiza: el microlearning solo supera al e-learning tradicional cuando está integrado en una ruta de aprendizaje con repetición espaciada y aplicación inmediata al contexto laboral. Sin esa integración, la ventaja se reduce a apenas 12%.</p>
-      <div style="background:#FFFBEB;border-left:3px solid #B45309;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#B45309;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          La discusión 'micro vs. largo' es falsa. La variable que determina la retención no es la duración sino la integración pedagógica: repetición espaciada, aplicación contextual y seguimiento. Los diseñadores instruccionales que entiendan esto construirán programas que los datos validen — y los que no, seguirán justificando inversiones con outputs de satisfacción en lugar de resultados.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">El microlearning no es la solución mágica. El CIPD estudió 89 empresas durante 18 meses y encontró algo más matizado: las píldoras de 7 minutos dan 73% más retención SOLO cuando están integradas con repetición espaciada y aplicación inmediata.
-
-Sin esa integración, la ventaja cae a 12%. El formato no es lo que determina el aprendizaje — es la arquitectura pedagógica detrás. ¿Tus programas de microlearning tienen esa arquitectura?</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">📱 MICROLEARNING: VERDAD VS MITO
-
-✅ 73% más retención con píldoras de 7 min
-❌ PERO solo si incluye:
-• Repetición espaciada
-• Aplicación inmediata
-• Ruta integrada
-
-Sin eso: solo 12% de mejora.
-
-El formato no es el secreto — es la pedagogía. 🧠
-
-#Microlearning #DiseñoInstruccional #eLearning #L&D</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Dato importante para diseñadores de aprendizaje: el microlearning da 73% más retención, PERO solo cuando está integrado con repetición espaciada y aplicación al trabajo. Sin eso, la ventaja cae a 12%. El formato no salva una mala pedagogía. 📱</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="consultoria" style="margin-bottom:44px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;
-                  border-bottom:1px solid #E8DFC8;">
-        <div style="width:4px;height:22px;background:#0E7490;border-radius:2px;flex-shrink:0;"></div>
-        <span style="font-size:22px;line-height:1;">⚙️</span>
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;
-                    color:#0F2027;margin:0;letter-spacing:-0.3px;">Consultoría & Gestión de Proyectos</h2>
-      </div>
-      
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #0E7490;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#DCFCE7;color:#14532D;">🌎 Latam</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">Project Management Journal / PMI Latam Chapter</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Hoy</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">Hybrid Agile + Design Thinking: cómo las consultoras de transformación en Latam están rediseñando su metodología para proyectos de cultura y liderazgo</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">El PMI Latam Chapter ha publicado un análisis de 34 proyectos de consultoría en transformación cultural y desarrollo de liderazgo ejecutados en 2024-2025, comparando metodologías puras (Agile, Design Thinking, PMI tradicional) contra enfoques híbridos. Los proyectos con metodología híbrida Agile+DT mostraron 47% mayor tasa de adopción sostenida del cambio a 12 meses y 31% mayor satisfacción del cliente. La clave del éxito: usar Design Thinking en la fase de diagnóstico y co-diseño, y Agile Scrum en la implementación por sprints de 2 semanas. Los proyectos puramente PMI tradicional tuvieron la mayor tasa de 'éxito en papel, fracaso en adopción': 58%.</p>
-      <div style="background:#ECFEFF;border-left:3px solid #0E7490;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#0E7490;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          La metodología ya no es un diferenciador solo en proyectos tech. En consultoría de RRHH y cultura, los clientes exigen rigor metodológico visible y adaptabilidad ágil. Las consultoras que articulen un enfoque híbrido propio —y lo puedan explicar con claridad— ganarán licitaciones contra competidores que entregan propuestas genéricas.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">El 58% de los proyectos de transformación cultural gestionados con PMI tradicional tienen éxito en papel pero fracasan en adopción real. Lo documentó el PMI Latam Chapter en 34 proyectos reales.
-
-La alternativa que sí funciona: Design Thinking en diagnóstico + Agile en implementación. 47% más adopción sostenida. Para quienes vendemos proyectos de consultoría, este dato redefine nuestra propuesta metodológica.</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">⚙️ METODOLOGÍA QUE SÍ FUNCIONA EN CONSULTORÍA
-
-🔴 PMI Tradicional solo: 58% fracasa en adopción
-✅ Design Thinking + Agile: 47% más adopción real
-
-El secreto:
-→ DT para diagnosticar y co-diseñar
-→ Agile para implementar por sprints
-
-#Consultoría #AgileHR #DesignThinking #PMI</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Para quienes hacemos consultoría de cultura y liderazgo: el PMI Latam documentó que los proyectos híbridos (Design Thinking + Agile) logran 47% más adopción real que los puramente PMI tradicional. ¿Tiene sentido revisar nuestra metodología? ⚙️</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #0E7490;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#F3F4F6;color:#374151;">🌐 Global</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">ROI Institute / Training Industry Magazine</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Ayer</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">Cómo calcular el ROI real de programas de formación corporativa: el modelo Phillips revisado para servicios de L&D en mercados emergentes</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">El ROI Institute ha publicado una actualización del modelo Phillips para el cálculo de retorno de inversión en formación, específicamente calibrada para mercados emergentes donde los datos de referencia difieren de los mercados anglófonos. Los cambios principales incluyen: factores de aislamiento ajustados para contextos de alta variabilidad económica, nuevos indicadores de nivel 4 (impacto en negocio) adaptados a empresas medianas de Latam, y una guía para monetizar intangibles como retención de talento y cultura usando benchmarks locales. El reporte incluye 12 casos de estudio de empresas en Brasil, Colombia y México.</p>
-      <div style="background:#ECFEFF;border-left:3px solid #0E7490;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#0E7490;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          Uno de los mayores obstáculos para vender formación corporativa B2B en Latam es la incapacidad de mostrar ROI con datos locales confiables. Este modelo Phillips actualizado resuelve ese problema. Las consultoras que lo incorporen en sus propuestas tendrán un argumento financiero que pocos competidores pueden igualar en la región.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">El argumento que más necesita L&D en Latam: cómo calcular ROI de formación con datos locales, no con benchmarks de EEUU o Europa.
-
-El ROI Institute acaba de publicar el modelo Phillips actualizado para mercados emergentes. Factores de aislamiento, indicadores de impacto y monetización de intangibles calibrados para nuestra realidad. Para quienes vendemos formación B2B: esto cambia cómo estructuramos la propuesta económica.</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">💰 ¿CUÁNTO VALE TU PROGRAMA DE FORMACIÓN?
-
-El ROI Institute actualizó el modelo Phillips para Latam:
-✅ Factores ajustados a mercados emergentes
-✅ Benchmarks locales, no de EEUU
-✅ Cómo monetizar retención y cultura
-
-Probar ROI = ganar licitaciones. 📊
-
-#ROI #Formación #L&D #Consultoría</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Recurso clave para quienes vendemos formación B2B: el ROI Institute publicó el modelo Phillips actualizado para Latam, con benchmarks locales para calcular retorno real de programas de capacitación. Diferenciador en propuestas comerciales. 💰</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
-    <div id="mercado" style="margin-bottom:44px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;padding-bottom:14px;
-                  border-bottom:1px solid #E8DFC8;">
-        <div style="width:4px;height:22px;background:#991B1B;border-radius:2px;flex-shrink:0;"></div>
-        <span style="font-size:22px;line-height:1;">📊</span>
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;
-                    color:#0F2027;margin:0;letter-spacing:-0.3px;">Mercado Laboral Panamá & Latam</h2>
-      </div>
-      
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #991B1B;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#DBEAFE;color:#1E3A8A;">🇵🇦 Panamá</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">INEC Panamá / Ministerio de Trabajo y Desarrollo Laboral</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Hoy</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">Mercado laboral Panamá Q1 2026: desempleo cae a 6.1%, sector financiero y tecnológico lideran contratación con escasez crítica de perfiles híbridos</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">Los datos del INEC correspondientes al primer trimestre de 2026 muestran una reducción del desempleo al 6.1%, la cifra más baja desde 2019. El sector financiero lidera la creación de empleo formal con 4,200 nuevos puestos, seguido por tecnología (3,800) y logística (2,900). Sin embargo, el 67% de las empresas reportan dificultad para encontrar profesionales con competencias híbridas —combinación de conocimiento técnico especializado con habilidades de gestión, comunicación y liderazgo. El salario promedio de posiciones híbridas supera en un 38% al de posiciones puramente técnicas o puramente gerenciales.</p>
-      <div style="background:#FFF1F2;border-left:3px solid #991B1B;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#991B1B;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          La escasez de perfiles híbridos no es un problema de mercado laboral — es una oportunidad de formación. Profesionales que combinen expertise técnico con competencias de liderazgo y comunicación tienen una prima salarial del 38% y alta demanda. Para academias y consultoras de formación en Panamá, diseñar programas que construyan este perfil es capturar el segmento de mayor valor del mercado.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Panamá, Q1 2026: desempleo al 6.1% (mínimo desde 2019) y las empresas no encuentran el talento que necesitan. El 67% reporta escasez de perfiles híbridos — profesionales que mezclan expertise técnico con liderazgo y comunicación.
-
-Esas posiciones pagan 38% más. Para el ecosistema de formación: esto define exactamente qué programas tienen demanda insatisfecha en el mercado local.</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">🇵🇦 MERCADO LABORAL PANAMÁ 2026
-
-📉 Desempleo: 6.1% (mínimo histórico)
-📈 Empleos nuevos: financiero + tech + logística
-💰 Perfiles híbridos: 38% más salario
-⚠️ 67% empresas no encuentran estos perfiles
-
-¿Eres ese perfil híbrido que buscan? 🎯
-
-#Panama #MercadoLaboral #Empleo #Carrera</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Datos frescos del INEC: Panamá tiene 6.1% de desempleo (récord bajo) pero el 67% de empresas no encuentran perfiles híbridos (técnicos + liderazgo). Esas posiciones pagan 38% más. Gran oportunidad para programas de formación que construyan ese perfil. 🇵🇦</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    <div style="background:#FDFCFA;border-radius:4px;padding:24px;margin-bottom:12px;
-                border:1px solid #EAE3D6;border-top:3px solid #991B1B;">
-      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px;flex-wrap:wrap;">
-        <span style="display:inline-block;padding:2px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:0.3px;background:#DCFCE7;color:#14532D;">🌎 Latam</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#6B7280;font-weight:500;">LinkedIn Economic Graph / ManpowerGroup Latam</span>
-        <span style="font-size:11px;color:#C8BDB0;">·</span>
-        <span style="font-size:11px;color:#9A8C7E;font-style:italic;">Hoy</span>
-      </div>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:18px;font-weight:700;
-                  color:#0F2027;margin:0 0 12px;line-height:1.4;">La 'Gran Redefinición' laboral en Latam: 4 de cada 10 profesionales replantean su carrera en 2026 por el impacto de la IA y el auge del trabajo basado en proyectos</h3>
-      <p style="font-size:13.5px;color:#4A5568;line-height:1.75;margin:0 0 16px;">El LinkedIn Economic Graph para Latam 2026 revela que el 41% de los profesionales de la región están activamente repensando su trayectoria profesional, impulsados principalmente por la automatización de tareas (63%), el crecimiento del trabajo por proyectos (47%) y la percepción de que sus habilidades actuales perderán valor en menos de 3 años (38%). Los sectores más afectados: contabilidad y finanzas operativas, recursos humanos administrativo y atención al cliente. Los más resilientes: roles que combinan juicio humano con uso estratégico de IA, liderazgo, diseño de aprendizaje y consultoría especializada.</p>
-      <div style="background:#FFF1F2;border-left:3px solid #991B1B;
-                  padding:12px 16px;margin-bottom:0;">
-        <p style="font-size:10px;font-weight:700;color:#991B1B;margin:0 0 5px;
-                   text-transform:uppercase;letter-spacing:1px;">Por qué importa</p>
-        <p style="font-size:13px;color:#1E293B;margin:0;line-height:1.65;font-style:italic;">
-          El 41% de profesionales en transición de carrera representa la mayor ola de demanda de upskilling en la historia de Latam. Las organizaciones que anticipen esta transición con programas de reskilling internos retendrán talento valioso. Las academias que diseñen rutas de transición para estos perfiles capturarán un mercado masivo. La ventana de oportunidad es los próximos 18-24 meses.
-        </p>
-      </div>
-      
-        <div style="margin-top:20px;padding-top:16px;border-top:1px dashed #E2E8F0;">
-          <p style="font-size:11px;font-weight:700;color:#94A3B8;text-transform:uppercase;
-                    letter-spacing:1px;margin:0 0 12px;">Contenido para redes</p>
-          <div style="display:grid;gap:10px;">
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #0077B5;">
-              <p style="font-size:10px;font-weight:700;color:#0077B5;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">LinkedIn</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">4 de cada 10 profesionales en Latam están repensando su carrera. El LinkedIn Economic Graph 2026 lo documenta: automatización, trabajo por proyectos y obsolescencia percibida de habilidades son los tres motores.
-
-Lo que más me impacta: los roles más resilientes son exactamente los que combinan juicio humano + uso de IA + liderazgo. La inversión en esas competencias nunca fue más urgente — ni más rentable.</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #E1306C;">
-              <p style="font-size:10px;font-weight:700;color:#E1306C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">Instagram</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">🌎 LATAM EN TRANSICIÓN LABORAL
-
-4 de cada 10 profesionales replantean su carrera en 2026
-
-Por qué:
-🤖 IA automatiza tareas
-📋 Crece trabajo por proyectos
-⏰ Sienten que sus skills caducan
-
-Los que sobreviven:
-✅ Liderazgo + IA + criterio humano
-
-El momento de reinventarse es AHORA 💪
-
-#FuturoDelTrabajo #Latam #Reskilling #IA</p>
-            </div>
-            <div style="background:#F8FAFC;border-radius:8px;padding:12px;border-left:3px solid #25D366;">
-              <p style="font-size:10px;font-weight:700;color:#1A7F3C;margin:0 0 6px;text-transform:uppercase;
-                         letter-spacing:0.8px;">WhatsApp</p>
-              <p style="font-size:12px;color:#475569;margin:0;line-height:1.6;
-                         white-space:pre-line;">Dato impactante: el 41% de profesionales en Latam está repensando su carrera por la IA y el trabajo por proyectos. Los roles más resilientes combinan liderazgo con uso estratégico de IA. Ventana de oportunidad de 18-24 meses para formación. 🌎</p>
-            </div>
-          </div>
-        </div>
-    </div>
-    </div>
-
-    <!-- SECCIONES FIJAS -->
-    <div style="margin-bottom:40px;">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;padding-bottom:14px;
-                  border-bottom:1px solid #E8DFC8;">
-        <div style="width:4px;height:22px;background:#C9A84C;border-radius:2px;flex-shrink:0;"></div>
-        <h2 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;
-                    color:#0F2027;margin:0;letter-spacing:-0.3px;">Secciones Fijas</h2>
-      </div>
-      
-    <div style="background:#FAF6EE;border-radius:16px;padding:32px;margin-bottom:24px;
-                border:1px solid #E8DFC8;border-left:5px solid #C9A84C;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:16px;right:24px;font-size:56px;opacity:0.08;line-height:1;">💡</div>
-      <p style="font-size:11px;font-weight:700;color:#C9A84C;margin:0 0 10px;
-                 text-transform:uppercase;letter-spacing:1.5px;">¿Sabías que?</p>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:20px;font-weight:700;
-                  color:#0F2027;margin:0 0 16px;line-height:1.4;">¿Sabías que el cerebro consolida el 80% del aprendizaje durante el sueño profundo?</h3>
-      <p style="font-size:14px;color:#4A5568;line-height:1.8;margin:0;">La fase N3 del sueño (sueño de ondas lentas) es cuando el hipocampo transfiere memorias recientes a la corteza prefrontal para almacenamiento a largo plazo. Un estudio de 2025 del Instituto Max Planck confirma que dormir menos de 6 horas reduce la retención de nuevas habilidades aprendidas ese día en un 40%, independientemente de cuántas horas de práctica se hayan dedicado. Implicación directa para L&D: un programa de formación de 8 horas seguidas en un solo día es neurológicamente inferior a 4 horas distribuidas en dos días con una noche de sueño en el medio.</p>
-    </div>
-      
-    <div style="background:#FFFBEB;border:1px solid #FDE68A;border-radius:16px;padding:32px;
-                margin-bottom:24px;">
-      <p style="font-size:11px;font-weight:700;color:#B45309;margin:0 0 10px;
-                 text-transform:uppercase;letter-spacing:1.5px;">📊 Dato del mercado</p>
-      <p style="font-family:'Playfair Display',Georgia,serif;font-size:48px;font-weight:700;
-                 color:#92400E;margin:0 0 8px;line-height:1;">$8.7B USD</p>
-      <p style="font-size:16px;font-weight:600;color:#78350F;margin:0 0 12px;">Gasto total en capacitación corporativa en América Latina durante 2025</p>
-      <p style="font-size:14px;color:#92400E;line-height:1.6;margin:0 0 12px;">Representando un crecimiento del 22% respecto a 2024 y superando por primera vez los niveles pre-pandemia. Colombia (+31%), Panamá (+28%) y México (+24%) lideran el crecimiento. El segmento de mayor expansión: formación en liderazgo y habilidades directivas (+38%). El de menor crecimiento: formación técnica tradicional (+8%), presionado por la automatización y el aprendizaje autodirigido.</p>
-      <p style="font-size:11px;color:#B45309;margin:0;font-style:italic;">Fuente: Training Industry Report Latam 2026 / AEFOL</p>
-    </div>
-      
-    <div style="background:#ECFEFF;border:1px solid #A5F3FC;border-radius:16px;padding:32px;
-                margin-bottom:24px;">
-      <p style="font-size:11px;font-weight:700;color:#0E7490;margin:0 0 4px;
-                 text-transform:uppercase;letter-spacing:1.5px;">⚙️ Herramienta del día</p>
-      <p style="font-size:12px;color:#0E7490;margin:0 0 12px;font-style:italic;">Framework de neurociencia aplicada</p>
-      <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;
-                  color:#164E63;margin:0 0 16px;">Marco SCARF de Gestión Neurológica del Cambio</h3>
-      <p style="font-size:14px;color:#0E7490;line-height:1.7;margin:0 0 16px;">Desarrollado por David Rock (Neuroleadership Institute), el modelo SCARF identifica las cinco dimensiones del cerebro social que determinan si una persona percibe una situación como amenaza o recompensa: Status (percepción de estatus relativo), Certainty (necesidad de predecir el futuro), Autonomy (sensación de control), Relatedness (sensación de conexión segura) y Fairness (percepción de equidad). En gestión del cambio organizacional, cada resistencia puede mapearse a una o más dimensiones SCARF amenazadas.</p>
-      <p style="font-size:12px;font-weight:700;color:#164E63;margin:0 0 10px;
-                 text-transform:uppercase;letter-spacing:0.8px;">Cómo aplicarlo:</p>
-      <ol style="margin:0 0 16px;padding-left:20px;"><li style="font-size:13px;color:#164E63;line-height:1.6;margin-bottom:6px;">Diagnostica cuál dimensión SCARF está amenazada antes de diseñar tu intervención de cambio</li><li style="font-size:13px;color:#164E63;line-height:1.6;margin-bottom:6px;">Ajusta el mensaje de cambio para activar recompensa en lugar de amenaza en cada dimensión</li><li style="font-size:13px;color:#164E63;line-height:1.6;margin-bottom:6px;">Usa SCARF en coaching ejecutivo para entender qué motiva o bloquea a cada líder</li><li style="font-size:13px;color:#164E63;line-height:1.6;margin-bottom:6px;">Diseña experiencias de aprendizaje que maximicen Autonomy y Certainty para reducir resistencia</li></ol>
-      <p style="font-size:11px;color:#0E7490;margin:0;font-style:italic;">📖 Rock, D. (2008). SCARF: A brain-based model for collaborating with and influencing others. NeuroLeadership Journal.</p>
-    </div>
-      
-    <div style="background:#FFFFFF;border-radius:16px;padding:36px;margin-bottom:24px;
-                border:1px solid #E8DFC8;position:relative;overflow:hidden;">
-      <div style="position:absolute;top:20px;left:28px;font-family:'Playfair Display',Georgia,serif;
-                  font-size:120px;color:#C9A84C;opacity:0.15;line-height:1;user-select:none;">&ldquo;</div>
-      <p style="font-size:11px;font-weight:700;color:#C9A84C;margin:0 0 20px;
-                 text-transform:uppercase;letter-spacing:1.5px;position:relative;">Voz del experto</p>
-      <blockquote style="margin:0 0 24px;padding:0 0 0 8px;position:relative;">
-        <p style="font-family:'Playfair Display',Georgia,serif;font-size:21px;font-weight:400;
-                   color:#0F2027;line-height:1.65;font-style:italic;margin:0;">
-          &ldquo;La cultura se come a la estrategia en el desayuno. Pero la neurociencia se come a la cultura en el almuerzo. Hasta que no entendamos cómo funciona el cerebro de las personas que componen esa cultura, estaremos redecorando el Titanic.&rdquo;
+      <div style="font-family:'Playfair Display',Georgia,serif;font-size:96px;
+                  color:#C9A84C;line-height:0.45;margin-bottom:20px;opacity:0.5;">&ldquo;</div>
+      <blockquote style="margin:0 0 40px 0;">
+        <p style="font-family:'Playfair Display',Georgia,serif;font-size:22px;
+                   font-weight:400;color:#FFFFFF;line-height:1.7;font-style:italic;">
+          The organizations that will win the talent wars of the next decade are not those with the best compensation packages. They are those with the best learning cultures — where people grow faster than the market grows.
         </p>
       </blockquote>
-      <div style="display:flex;align-items:center;gap:14px;padding-top:20px;
-                  border-top:1px solid #E8DFC8;">
-        <div style="width:42px;height:42px;border-radius:50%;background:#0F2027;border:2px solid #C9A84C;
-                    display:flex;align-items:center;justify-content:center;font-size:16px;flex-shrink:0;">👤</div>
-        <div>
-          <p style="font-size:14px;font-weight:700;color:#0F2027;margin:0 0 2px;">David Rock</p>
-          <p style="font-size:12px;color:#C9A84C;font-weight:500;margin:0 0 2px;">CEO, Neuroleadership Institute</p>
-          <p style="font-size:11px;color:#9A8C7E;margin:0;font-style:italic;">Keynote en el Global Leadership Summit, Singapur, 2025</p>
-        </div>
+      <div style="border-top:1px solid rgba(201,168,76,0.3);padding-top:28px;">
+        <p style="font-size:15px;font-weight:700;color:#FFFFFF;margin-bottom:4px;">
+          Josh Bersin
+        </p>
+        <p style="font-size:12px;color:#C9A84C;margin-bottom:8px;font-weight:500;">
+          Global Industry Analyst, Founder of The Josh Bersin Company
+        </p>
+        <p style="font-size:11px;color:rgba(255,255,255,0.45);font-style:italic;margin-bottom:20px;">
+          HR Technology Conference, Las Vegas, octubre 2025
+        </p>
+        <p style="font-size:14px;color:rgba(255,255,255,0.75);line-height:1.75;">
+          Bersin analiza datos de más de 7.000 organizaciones globales. Su investigación sobre culturas de aprendizaje muestra que las empresas con alto índice de aprendizaje tienen 34% más rentabilidad y 46% más probabilidades de ser las primeras en su mercado.
+        </p>
       </div>
     </div>
+  </section>
+  
+  <section id="sabias-que" style="background:#FAF6EE;padding:52px 56px;margin-bottom:3px;">
+    <div style="display:flex;align-items:center;gap:16px;margin-bottom:32px;flex-wrap:wrap;">
+      <div style="width:32px;height:2px;background:#C9A84C;flex-shrink:0;"></div>
+      <span style="font-size:10px;font-weight:700;letter-spacing:2.5px;
+                   text-transform:uppercase;color:#1B2E3C;">¿Sabías que?</span>
+      <div style="flex:1;height:1px;background:#EDE9E0;min-width:20px;"></div>
+      <span style="font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:#1B2E3C;border:1px solid #1B2E3C;padding:3px 9px;display:inline-block;">Global</span>
     </div>
-
-  </div>
-
-  <!-- ══ FOOTER ════════════════════════════════════════════════════════ -->
-  <div style="background:#0F2027;border-radius:0 0 4px 4px;padding:40px 48px;text-align:center;
-              box-shadow:0 4px 24px rgba(15,32,39,0.15);">
-    <!-- Orla dorada -->
-    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:24px;">
-      <div style="flex:1;height:1px;background:#C9A84C;opacity:0.3;"></div>
-      <div style="width:6px;height:6px;border-radius:50%;background:#C9A84C;"></div>
-      <div style="flex:1;height:1px;background:#C9A84C;opacity:0.3;"></div>
+    <div style="border-left:4px solid #C9A84C;padding-left:28px;">
+      <p style="font-size:16px;color:#0D0D0D;line-height:1.92;font-style:italic;">
+        El 80% del aprendizaje se consolida durante el sueño profundo (fase N3), cuando el hipocampo transfiere memorias recientes a la corteza prefrontal. Un estudio de 2025 del Instituto Max Planck confirma que dormir menos de 6 horas reduce la retención de habilidades aprendidas ese día en un 40%, independientemente de las horas de práctica. Un programa de capacitación de 8 horas en un solo día es neurológicamente inferior a 4 horas distribuidas en dos días con una noche de sueño en el medio — implicación directa para el diseño de cualquier programa de formación corporativa.
+      </p>
     </div>
-    <p style="font-family:'Playfair Display',Georgia,serif;font-size:22px;font-weight:700;
-               color:#FAF6EE;margin:0 0 6px;letter-spacing:-0.3px;">The Human Factors</p>
-    <p style="font-size:12px;color:#C9A84C;letter-spacing:0.5px;margin:0 0 18px;">
-      es una publicación de <strong style="font-weight:700;">Bildung</strong>
-      &nbsp;—&nbsp; Consulting &middot; Academy &middot; Development
+  </section>
+  
+  <section id="cierre" style="background:#0D0D0D;padding:52px 56px;margin-bottom:3px;">
+    <div style="margin-bottom:20px;">
+      <div style="height:1px;background:rgba(201,168,76,0.4);margin-bottom:14px;"></div>
+      <span style="font-size:10px;font-weight:700;letter-spacing:2.5px;
+                   text-transform:uppercase;color:#C9A84C;">Reflexión editorial</span>
+    </div>
+    <h3 style="font-family:'Playfair Display',Georgia,serif;font-size:28px;font-weight:700;
+                color:#FFFFFF;margin-bottom:20px;line-height:1.25;letter-spacing:-0.5px;">
+      La ventana se está cerrando
+    </h3>
+    <p style="font-size:15px;color:rgba(255,255,255,0.75);line-height:1.85;margin-bottom:28px;">
+      Los datos de esta edición convergen en un mismo punto: las organizaciones que inviertan en liderazgo, analítica de talento y aprendizaje medible en los próximos 18 meses capturarán una ventaja competitiva estructural. Las que no lo hagan pagarán el costo en forma de rotación, productividad perdida y talento que migra a quien sí invierte.
     </p>
-    <div style="display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:18px;">
-      <div style="flex:1;height:1px;background:#C9A84C;opacity:0.3;"></div>
-      <div style="width:4px;height:4px;border-radius:50%;background:#C9A84C;opacity:0.5;"></div>
-      <div style="flex:1;height:1px;background:#C9A84C;opacity:0.3;"></div>
+    <p style="font-size:13px;font-weight:700;color:#C9A84C;letter-spacing:0.5px;
+               font-style:italic;">La inteligencia está disponible. La decisión es de liderazgo.</p>
+  </section>
+  
+  <section id="fuentes" style="background:#FFFFFF;padding:52px 56px;margin-bottom:3px;">
+    <div style="margin-bottom:28px;"><div style="height:2px;background:#0D0D0D;margin-bottom:12px;"></div><span style="font-size:10px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:#C9A84C;">Fuentes Verificadas</span></div>
+    <div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #EDE9E0;"><span style="font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#C9A84C;font-weight:400;flex-shrink:0;opacity:0.45;line-height:1.2;">01</span><div><span style="font-size:13.5px;font-weight:600;color:#0D0D0D;">Journal of Applied Psychology</span><span style="font-size:13px;color:#6B7280;"> — Metaanálisis: IE del líder y productividad en equipos híbridos (2026)</span><div style="margin-top:5px;"><span style="font-size:9px;color:#1B2E3C;letter-spacing:1px;text-transform:uppercase;border:1px solid #1B2E3C;padding:2px 7px;display:inline-block;">Global</span></div></div></div><div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #EDE9E0;"><span style="font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#C9A84C;font-weight:400;flex-shrink:0;opacity:0.45;line-height:1.2;">02</span><div><span style="font-size:13.5px;font-weight:600;color:#0D0D0D;">Deloitte Human Capital Report</span><span style="font-size:13px;color:#6B7280;"> — People Analytics en Centroamérica — adopción y resultados (2026)</span><div style="margin-top:5px;"><span style="font-size:9px;color:#1B2E3C;letter-spacing:1px;text-transform:uppercase;border:1px solid #1B2E3C;padding:2px 7px;display:inline-block;">Panamá / Latam</span></div></div></div><div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #EDE9E0;"><span style="font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#C9A84C;font-weight:400;flex-shrink:0;opacity:0.45;line-height:1.2;">03</span><div><span style="font-size:13.5px;font-weight:600;color:#0D0D0D;">Technavio / MarketsandMarkets</span><span style="font-size:13px;color:#6B7280;"> — Mercado e-learning corporativo Latam: proyecciones 2027 (2026)</span><div style="margin-top:5px;"><span style="font-size:9px;color:#1B2E3C;letter-spacing:1px;text-transform:uppercase;border:1px solid #1B2E3C;padding:2px 7px;display:inline-block;">Latam</span></div></div></div><div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #EDE9E0;"><span style="font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#C9A84C;font-weight:400;flex-shrink:0;opacity:0.45;line-height:1.2;">04</span><div><span style="font-size:13.5px;font-weight:600;color:#0D0D0D;">MIT Brain & Cognitive Sciences / Nature Neuroscience</span><span style="font-size:13px;color:#6B7280;"> — Intervalo óptimo de práctica en adultos (2026)</span><div style="margin-top:5px;"><span style="font-size:9px;color:#1B2E3C;letter-spacing:1px;text-transform:uppercase;border:1px solid #1B2E3C;padding:2px 7px;display:inline-block;">Global</span></div></div></div><div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #EDE9E0;"><span style="font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#C9A84C;font-weight:400;flex-shrink:0;opacity:0.45;line-height:1.2;">05</span><div><span style="font-size:13.5px;font-weight:600;color:#0D0D0D;">LinkedIn Economic Graph</span><span style="font-size:13px;color:#6B7280;"> — Redefinición profesional en Latam: impacto de IA (2026)</span><div style="margin-top:5px;"><span style="font-size:9px;color:#1B2E3C;letter-spacing:1px;text-transform:uppercase;border:1px solid #1B2E3C;padding:2px 7px;display:inline-block;">Latam</span></div></div></div><div style="display:flex;gap:20px;padding:16px 0;border-bottom:1px solid #EDE9E0;"><span style="font-family:'Playfair Display',Georgia,serif;font-size:20px;color:#C9A84C;font-weight:400;flex-shrink:0;opacity:0.45;line-height:1.2;">06</span><div><span style="font-size:13.5px;font-weight:600;color:#0D0D0D;">INEC Panamá / MITRADEL</span><span style="font-size:13px;color:#6B7280;"> — Mercado laboral Panamá Q1 2026</span><div style="margin-top:5px;"><span style="font-size:9px;color:#1B2E3C;letter-spacing:1px;text-transform:uppercase;border:1px solid #1B2E3C;padding:2px 7px;display:inline-block;">Panamá</span></div></div></div>
+  </section>
+  
+  <footer style="background:#0D0D0D;padding:44px 56px;">
+    <div style="text-align:center;margin-bottom:32px;">
+      <p style="font-family:'Playfair Display',Georgia,serif;font-size:18px;
+                 font-weight:600;color:#FFFFFF;letter-spacing:1px;margin-bottom:8px;">
+        The Human Factors Brief
+      </p>
+      <p style="font-size:11px;color:#C9A84C;letter-spacing:0.5px;margin-bottom:5px;">
+        es una publicación de <strong>BILDUNG</strong>
+      </p>
+      <p style="font-size:10px;color:rgba(255,255,255,0.35);letter-spacing:1.5px;
+                 text-transform:uppercase;">
+        Magazine &nbsp;·&nbsp; Consulting &nbsp;·&nbsp; Academy &nbsp;·&nbsp; Development
+      </p>
     </div>
-    <p style="font-size:10px;color:#4A5568;letter-spacing:0.5px;">
-      30 de abril de 2026 &nbsp;·&nbsp; Todos los derechos reservados &nbsp;·&nbsp;
-      <span style="color:#C9A84C;">© Bildung 2026</span>
-    </p>
-  </div>
-
-</div><!-- /newsletter-wrap -->
-</div><!-- /page -->
+    <div style="border-top:1px solid rgba(255,255,255,0.07);padding-top:24px;
+                text-align:center;margin-bottom:20px;">
+      <a href="#takeaways" style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin:0 12px;transition:color 0.2s;"onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Takeaways</a><a href="#articulo-principal" style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin:0 12px;transition:color 0.2s;"onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Análisis</a><a href="#inteligencia" style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin:0 12px;transition:color 0.2s;"onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Tendencias</a><a href="#dato-mercado" style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin:0 12px;transition:color 0.2s;"onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Dato</a><a href="#herramienta" style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin:0 12px;transition:color 0.2s;"onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Herramienta</a><a href="#contexto" style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin:0 12px;transition:color 0.2s;"onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Contexto</a><a href="#voz-experto" style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin:0 12px;transition:color 0.2s;"onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Experto</a><a href="#sabias-que" style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin:0 12px;transition:color 0.2s;"onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">¿Sabías?</a><a href="#fuentes" style="font-size:10px;color:rgba(255,255,255,0.4);letter-spacing:1px;text-transform:uppercase;margin:0 12px;transition:color 0.2s;"onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.4)'">Fuentes</a>
+    </div>
+    <div style="text-align:center;">
+      <p style="font-size:10px;color:rgba(255,255,255,0.25);">
+        30 de abril de 2026 &nbsp;&nbsp;|&nbsp;&nbsp; Todos los derechos reservados
+        &nbsp;&nbsp;|&nbsp;&nbsp; &copy; BILDUNG 2026
+      </p>
+    </div>
+  </footer>
+</div>
+</div>
 </body>
 </html>
